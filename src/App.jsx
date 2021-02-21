@@ -2,162 +2,108 @@ import React, {
   Component
 } from 'react'
 import './App.css';
-import FoodBox from './FoodBox/FoodBox.jsx'
-import FoodDetail from './FoodDetail/FoodDetail.jsx'
-import {Scrollbars} from 'react-custom-scrollbars'
-import axios from 'axios'
+import './css/changing-page-animation.css'
+import './css/Home-ENG.css'
+import './css/bootstrap.min.css'
+// import './css/load'
 
+import Header from './Header/Index'
+import OverContainer from './Containers/OverContainer.jsx'
+import Cube from './Cube/Index'
+import HeaderContainer from './Containers/HeaderContainer.jsx'
+import Bgi from './components/bgi/Index'
+// import { Scrollbars } from 'react-custom-scrollbars'
 
 
 
 export default class App extends Component {
 
+  state ={
+    bgStyle:{
+      'transform':`translate(${0,0})`
+    },
+    cubeClasses:`cube`
 
-  state = {
-    data: [],
-    foods: [],
-    word: '',
-    foodDetail: {},
-    loading : true
   }
-  style = {
-    color: 'red',
-    cursor: 'pointer'
-  }
-  saveTheWord = e => {
+
+
+
+  bgMoveHandler = e =>{
+    // console.log(e.pageX);
+    let x = e.pageX
+    let y = e.pageY
     this.setState({
-      word: e.target.value
+    bgStyle:{
+      
+      transform:`translate(${x/35}px  , -${y/35}px)`
+    }
     })
   }
-  
-  searchForFood(query) {
-   
-    const header = {headers : {
-      "Content-Type": "application/json"
-    }}
-    const key = 'apiKey=c35c3f2137a1449c949373e6f3ca17a4'
-      axios.get(`https://api.spoonacular.com/recipes/complexSearch?${key}&query=${query}` , header)
-      .then(res =>{
-        this.setState({
-          foods: res.data.results
-        })
-      }).catch(error =>{
-        alert(error.response);
-      })
-  }
-  async FoodDetails(id) {
+
+  homeHandler = () =>{
     this.setState({
-      loading : false
+    cubeClasses:`cube change_home`
     })
-    const header = {headers : {
-      "Content-Type": "application/json"
-    }}
-    const key = 'apiKey=c35c3f2137a1449c949373e6f3ca17a4'
-      axios.get(`https://api.spoonacular.com/recipes/${id}/information?${key}` , header) 
-      .then(foodDetail =>{
-        this.setState({
-          foodDetail: foodDetail.data ,
-          loading : true
-        })
-      })
-      .catch(error =>{
-        alert(error)
-      })
-      // console.log(this.state.loading);
   }
+
+  aboutHandler = () =>{
+    this.setState({
+    cubeClasses:`cube change_about`
+    })
+  }
+
+  resumeHandler = () =>{
+    this.setState({
+    cubeClasses:`cube change_resume`
+    })
+  }
+
+  portfolioHandler = () =>{
+    this.setState({
+    cubeClasses:`cube change_portfolio`
+    })
+  }
+
+  blogHandler = () =>{
+    this.setState({
+    cubeClasses:`cube change_blog`
+    })
+  }
+
+  contactHandler = () =>{
+    this.setState({
+    cubeClasses:`cube change_contact`
+    })
+  }
+
 
   render() {
 
-    const {
-      foodDetail
-    } =this.state
-    return (
-      <main className='main bg-dark'>
-{/* *********** food Recipes ********** */}
-        <section className='foodRec'>
-          <div className = 'cont flex'>
-          <h2>
-            Food Searching
-          </h2>
-          <div className='searchBox flex'>
-            <input onChange={this.saveTheWord} type="text" />
-            <button onClick={this.searchForFood.bind(this, this.state.word)}>
-              Search
-          </button>
-          </div>
-          </div>
-      <Scrollbars
-      autoHide
-      autoHideTimeout={1000}
-      autoHideDuration={200}
-      autoHeight
-      autoHeightMin={window.innerHeight - ((window.innerHeight/100) * 16) }
-      >
-      <div className = ' foods '>
-          {this.state.foods.map(item => {
-            return (
-              <FoodBox
-                click = {this.FoodDetails.bind(this , item.id)}
-                title={item.title}
-                src={item.image}
-                key={item.id}
-              />
-            )
-          })}
-          </div>
-      </Scrollbars>
-        </section>
-{/* ************ food Recipes ********* */}
-
-
-
-
-
-
-
-
-{/* ****** *** food Details ********** */}
-{/* <FoodDetail
-title = 'food title'
-price = '10'
-vegetarian = {false}
-healthScore = {32}
-minute = {20}
-
-/> */}
-    <FoodDetail 
-    image = {foodDetail.image}
-    title = {foodDetail.title}
-    price = {foodDetail.pricePerServing}
-    vegetarian = {foodDetail.vegetarian}
-    healthScore  = {foodDetail.healthScore}
-    minute = {foodDetail.readyInMinutes}
-    summary = {foodDetail.summary}
-    loading = {this.state.loading}
-    />
+    let handlers = {
+      home:this.homeHandler,
+      about:this.aboutHandler,
+      resume:this.resumeHandler,
+      portfolio : this.portfolioHandler ,
+      blog:this.blogHandler,
+      contact:this.contactHandler
+    }
     
+    return (
+      <main className='flex' onMouseMove={this.bgMoveHandler}>
 
-    {/* <p>
-    dangerouslySetInnerHTML={{__html: this.state.foodDetail.summary}}
-    </p> */}
-{/* ****** *** food Details ********** */}
-
+        <Bgi style ={this.state.bgStyle}/>
 
 
+        <HeaderContainer>
+          <Header events={handlers} />
 
 
+          <OverContainer>
+            <Cube class={this.state.cubeClasses} />
+          </OverContainer>
 
 
-
-
-{/* ****** ordering ******** */}
-{/* <section className='order flex'>
-  <h2>
-    Ordering Box
-  </h2>
-</section> */}
-{/* ****** ordering ******** */}
-
+        </HeaderContainer>
 
       </main>
     )

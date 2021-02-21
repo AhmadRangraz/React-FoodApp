@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+
+
+    <main>
+
+        <!-- ** hero** -->
+
+
+        <section id="hero">
+
+
+
+            <nav>
+                <img src="img/logo-with-bg.jpg" alt="">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <!-- <li><a href="">Blog</a></li> -->
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+
+
+            <div>
+                <span>
+                    Our work
+                </span>
+                <h5>
+                    Portfolio
+                </h5>
+            </div>
+
+        </section>
+        <!-- ** hero** -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ***** PG ***** -->
+
+
+
+
+
+        <section class="pg">
+
+
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('nature')"> Tricks</button>
+                <button class="btn" onclick="filterSelection('cars')"> Templates</button>
+                <button class="btn" onclick="filterSelection('people')"> Codepen</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column nature">
+                    <div class="content">
+                        <img src="img/portfolio-2-600x400.jpg" alt="Mountains" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="img/portfolio-1-600x400.jpg" alt="Lights" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="img/portfolio-4-600x400.jpg" alt="Nature" style="width:100%">
+
+                    </div>
+                </div>
+
+                <div class="column cars">
+                    <div class="content">
+                        <img src="img/portfolio-6-600x400.jpg" alt="Car" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="img/portfolio-5-600x400.jpg" alt="Car" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="img/portfolio-4-600x400.jpg" alt="Car" style="width:100%">
+
+                    </div>
+                </div>
+
+                <div class="column people">
+                    <div class="content">
+                        <img src="img/portfolio-3-600x400.jpg" alt="People" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="img/portfolio-2-600x400.jpg" alt="People" style="width:100%">
+
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="img/portfolio-1-600x400.jpg" alt="People" style="width:100%">
+
+                    </div>
+                </div>
+                <!-- END GRID -->
+            </div>
+
+
+
+        </section>
+
+
+        <!-- ***** PG ***** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ******************** footer ****************************** -->
+
+
+
+
+
+
+        <footer>
+
+            <!-- ** -->
+            <div>
+                <img src="img/logo-white.png" alt="">
+                <p>
+                    Litora torquent per conubia nostra, per inceptos himena eos. Fusce quis tempus elit. Class aptent
+                    taciti orquent per conubia nostra inceptos
+                </p>
+
+                <p>
+                    Copyright ©2020 All rights reserved | This template made by Ahmad_Rangraz_
+                </p>
+            </div>
+            <!-- ** -->
+
+
+
+
+            <!-- *** -->
+
+            <div>
+                <div>
+                    <h4>
+                        Tehran Office
+                    </h4>
+
+
+                    <p>
+                        C /Libertad, 34, 05200 Arevalo
+                    </p>
+                    <p>
+                        0034 373840 2445 322
+                    </p>
+                    <p>
+                        ahmad.rangraz.web@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h4>
+                        Barcelona Office
+                    </h4>
+
+
+                    <p>
+                        C /Libertad, 34, 05200
+                    </p>
+                    <p>
+                        0034 373840 2445 322
+                    </p>
+                    <p>
+                        ahmad.rangraz
+                    </p>
+                </div>
+                <div>
+                    <h4>
+                        New York Office
+                    </h4>
+
+
+                    <p>
+                        C /Libertad, 34, 05200
+                    </p>
+                    <p>
+                        0034
+                    </p>
+                    <p>
+                        ahmad.rangraz
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- *** -->
+
+        </footer>
+
+
+
+        <!-- ******************** footer ****************************** -->
+
+
+    </main>
+
+
+
+
+    <script>
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+main {
+    font-family: 'med';
+    width: 100%;
+    height: auto;
+}
+
+header {
+    height: 9vh;
+    width: 100%;
+    padding: 5px 10%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+}
+
+header>span {
+    font-weight: bold;
+    font-size: 3em;
+    /* margin-left: -15%; */
+}
+
+header>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: -10%; */
+}
+
+header>ul>li {
+    padding: 15px;
+    height: 100%;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>ul>li:hover a {
+    color: #a581fb;
+}
+
+header>ul>li>a {
+    text-decoration: none;
+    color: rgb(49, 48, 48);
+}
+
+header>ul>li:nth-of-type(7)>a {
+    color: rgb(25, 25, 255) !important;
+}
+
+.top {
+    background: url(img/water1.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.top>span:nth-of-type(2) {
+    margin: 3% auto;
+    text-shadow: 1px 1px 20px 10px gray;
+}
+
+.top>span:nth-of-type(1) {
+    font-weight: 750;
+    font-size: 5vw;
+    text-shadow: 5px 5px 15px black;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.btn1 {
+    background-color: #5d47d7;
+    height: 7vh;
+    /* width: 25%; */
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* font-size: 1.2em; */
+    color: white;
+    margin-right: 50px;
+    transition: .4s linear;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.btn2 {
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    min-width: 200px;
+    transition: linear .4s;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.btn1:hover {
+    opacity: .9;
+}
+
+.btn2:hover {
+    background-color: white;
+    color: black;
+}
+
+
+main>section:nth-of-type(2) {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+main>section:nth-of-type(2)>div {
+    height: 70%;
+    width: 30%;
+    /* margin-right: 5%; */
+    order: 2;
+    /* margin-top: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+main>section:nth-of-type(2)>div>p {
+    margin: 8%;
+
+}
+
+main>section:nth-of-type(2)>div>span {
+    font-size: 2em;
+}
+
+main>section:nth-of-type(2)>div>div {
+    width: 200px;
+    margin-left: 8%;
+}
+
+main>section:nth-of-type(2)>figure {
+    /* margin-left: 2%; */
+    order: 1;
+}
+
+main>section:nth-of-type(2)>figure>img {
+    width: 60%;
+}
+
+main>section:nth-of-type(3) {
+    width: 100%;
+    height: 75vh;
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main>section:nth-of-type(3)>div {
+    height: 70%;
+    width: 30%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+main>section:nth-of-type(3)>div>p {
+    margin: 8%;
+
+}
+
+main>section:nth-of-type(3)>div>span {
+    font-size: 2em;
+}
+
+main>section:nth-of-type(3)>div>div {
+    width: 200px;
+    margin-left: 8%;
+}
+
+main>section:nth-of-type(3)>figure {
+    /* margin-left: 2%; */
+    order: 2;
+}
+
+main>section:nth-of-type(3)>figure>img {
+    width: 60%;
+}
+
+
+
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+
+
+
+
+
+#water2 {
+    width: 100%;
+    height: 50vh;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    /* position: relative; */
+    background: url(img/water\ 2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#water2>span {
+    font-size: 5vw;
+    font-weight: normal;
+}
+
+#water2>p {
+    text-align: center;
+    font-size: 1vw;
+    margin: 5vh 25%;
+    font-weight: lighter;
+}
+
+.lo {
+    width: 100%;
+    height: 37.58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* color: white; */
+}
+
+.lo>span {
+    font-size: 2.5vw;
+    font-weight: normal;
+    margin-top: 5vh;
+    /* margin-left: ; */
+    text-align: center;
+}
+
+.lo>p {
+    text-align: center;
+    font-size: 1vw;
+    margin: 5vh 25%;
+    font-weight: lighter;
+    color: gray;
+    text-align: center;
+}
+.aks{
+    background-image: url(img/jg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    width: 75%;
+    height: 100%;
+}
+.aw{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+
+
+
+
+.gallery{
+    width: 100%;
+    height: 120vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.gt{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gt>span:nth-of-type(1){
+    font-size: 1.5vw;
+    font-weight: normal;
+    /* margin-top: 5%; */
+}
+.gt>span:nth-of-type(2){
+    margin-top: 5vh;
+    font-weight: 400;
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+.mg{
+    width: 100%;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: repeat(4 , 25%);
+    grid-template-rows: repeat(3 , 33.333%);
+    overflow: hidden;
+    grid-gap: 5px;
+}
+
+.mg>figure{
+    position: relative;
+    cursor: pointer;
+}
+.mg>figure>figcaption{
+    color: white;
+    font-size: 1.5vw;
+    z-index: 100;
+    position: absolute;
+    bottom:-10px;
+    left: 30%;
+    display: block;
+    /* background: linear-gradient(to top , black 10% ,transparent); */
+    transition: .4s ;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.mg>figure::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    z-index: 10;
+    background-image: linear-gradient(to top , rgba(0, 0, 0, 0.733) 10% , transparent 90%);
+    transition: 0.4s ease;
+}
+.mg>figure:hover::before{
+    height: 100%;
+}
+.mg>figure:hover figcaption {
+    bottom: 42%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+/* ******************************* Ahmad_Rangraz_ *********************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#water3{
+    height: 55vh;
+    width: 100%;
+    background:url(img/water3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+
+.footer{
+    width: 100%;
+    height: 50vh;
+}
+.footer>div:nth-of-type(1){
+    width: 100%;
+    height: 50vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer>div:nth-of-type(1)>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* overflow: hidden; */
+    height: 80%;
+    position: relative;
+}
+
+.footer>div:nth-of-type(1) ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* overflow: hidden; */
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* animation: linear infinite  2s logo; */
+
+}
+.footer>div:nth-of-type(1) ul>li{
+    padding: 5%;
+    max-height: 60px;
+    /* position: absolute; */
+}
+.footer>div:nth-of-type(1) a{
+    text-decoration: none;
+    opacity: .5;
+    transition: linear.4s;
+}
+.footer>div:nth-of-type(1) ul>li>a>img{
+    object-fit: contain;
+    max-height: 70px;
+    /* max-width: 100%; */
+
+}
+.footer>div:nth-of-type(1) ul>li:hover a{
+    opacity: 1;
+}
+
+
+
+
+
+.f{
+    font-size: 4vw;
+    color: white;
+    background-color: black;
+    text-shadow: 2px 2px 5px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}

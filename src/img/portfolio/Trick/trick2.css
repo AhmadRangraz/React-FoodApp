@@ -1,0 +1,71 @@
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.box{
+    width: 30%;
+    height: 40vh;
+    background: linear-gradient(0deg,#000,#474646);
+    margin: 200px  auto 0;
+    color: white;
+    font-size: 4vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span::selection{
+    background-color: white;
+    color: black;
+}
+span{
+    background:linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00 ,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00 ,#ff0000) ;
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: shadow 42s linear  infinite;
+}
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+.box::before,
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00 ,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00 ,#ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: shadow linear 50s  infinite;
+}
+.box::after{
+    filter: blur(20px);
+}
+@keyframes shadow {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    0%{
+        background-position: 0 0;
+    }
+}
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */
+/* *************************************** Ahmad_Rangraz_ *************************************************** */

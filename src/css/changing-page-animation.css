@@ -1,0 +1,256 @@
+.change_about {
+  -webkit-animation: about 2s linear forwards;
+          animation: about 2s linear forwards;
+}
+
+.change_about > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+.change_resume {
+  -webkit-animation: resume 2s linear forwards;
+          animation: resume 2s linear forwards;
+}
+
+.change_resume > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+.change_portfolio {
+  -webkit-animation: portfolio 2s linear forwards;
+          animation: portfolio 2s linear forwards;
+}
+
+.change_portfolio > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+.change_blog {
+  -webkit-animation: blog 2s linear forwards;
+          animation: blog 2s linear forwards;
+}
+
+.change_blog > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+.change_contact {
+  -webkit-animation: contact 2s linear forwards;
+          animation: contact 2s linear forwards;
+}
+
+.change_contact > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+.change_home {
+  -webkit-animation: home 2s linear forwards;
+          animation: home 2s linear forwards;
+}
+
+.change_home > section {
+  -webkit-animation: backface 3s linear;
+          animation: backface 3s linear;
+}
+
+@-webkit-keyframes about {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, 180deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, 180deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes about {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, 180deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, 180deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes resume {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 1, -10deg) scale(0.3);
+            transform: rotate3d(1, 1, 1, -10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(-90deg) scale(1);
+            transform: rotateY(-90deg) scale(1);
+  }
+}
+
+@keyframes resume {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 1, -10deg) scale(0.3);
+            transform: rotate3d(1, 1, 1, -10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(-90deg) scale(1);
+            transform: rotateY(-90deg) scale(1);
+  }
+}
+
+@-webkit-keyframes portfolio {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, 90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, 90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+}
+
+@keyframes portfolio {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, 10deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, 90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, 90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+}
+
+@-webkit-keyframes blog {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, -30deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, -30deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+
+@keyframes blog {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  30% {
+    -webkit-transform: rotate3d(1, 1, 0, -30deg) scale(0.3);
+            transform: rotate3d(1, 1, 0, -30deg) scale(0.3);
+  }
+  70% {
+    -webkit-transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+            transform: rotate3d(1, 1, 0, -90deg) scale(0.6);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+
+@-webkit-keyframes contact {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+@keyframes contact {
+  10% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+@-webkit-keyframes home {
+  10% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes home {
+  10% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+/*# sourceMappingURL=changing-page-animation.css.map */

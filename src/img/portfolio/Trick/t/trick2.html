@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            font-size: 5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* transform-style: preserve-3d; */
+            transform: perspective(900px) rotateZ(-9deg) rotateY(36deg) translateZ(13px) scale(0.9);
+            z-index: 99;
+            transition: .2s linear;
+        }
+
+        .border {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 5px solid orange;
+            transform: perspective(900px) rotateY(-40deg);
+            transition: .2s ease-in;
+        }
+
+        .sele:hover .card {
+            transform: perspective(900px) rotateZ(0) rotateY(0) scale(1) translate(0);
+        }
+
+        .sele:hover .border {
+            transform: perspective(900px) rotateY(0);
+            z-index: 999;
+        }
+
+        .sele {
+            width: 30%;
+            height: 30%;
+            /* transform: rotate3d(1,1,1,45deg); */
+            transform-style: preserve-3d;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="sele">
+            <div class="card">Hello there!</div>
+            <div class="border"></div>
+        </div>
+    </main>
+</body>
+
+</html>

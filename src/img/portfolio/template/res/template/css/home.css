@@ -1,0 +1,724 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  font-family: 'Poppins', sans-serif;
+}
+
+.flex, #hero > nav, #hero > nav > ul, #hero > div, #hero > div > .btn1, #social, #social > ul, #social > ul > li:nth-of-type(1), #intro, #intro > div, #event, #event > div, #event > div > div, #event > div > div > div, #event > div > div > div .ev_txt, #portfolio, #portfolio > figure, .about, .about > div, .about > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+#hero {
+  background-image: url(../img/slider-1-1920x1080.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+#hero > nav {
+  width: 100%;
+  height: 10vh;
+  padding: 1.5% 15%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#hero > nav > ul {
+  list-style-type: none;
+  width: 70%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #hero > nav > ul {
+    display: none;
+  }
+}
+
+#hero > nav > ul > li {
+  padding: 0 3%;
+}
+
+#hero > nav > ul > li > a {
+  color: white;
+}
+
+#hero > nav > ul > li > a:hover {
+  border-bottom: 2px solid white;
+}
+
+#hero > div {
+  width: 100%;
+  height: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5% auto;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #hero > div {
+    width: 100%;
+  }
+}
+
+#hero > div > h5 {
+  font-size: 1.2em;
+}
+
+#hero > div > h1 {
+  font-size: 5em;
+}
+
+@media screen and (max-width: 768px) {
+  #hero > div > h1 {
+    font-size: 2.4em;
+  }
+}
+
+#hero > div > h3 {
+  font-family: 'Allura', cursive;
+  font-size: 6em;
+  letter-spacing: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  #hero > div > h3 {
+    font-size: 4em;
+  }
+}
+
+#hero > div > .btn1 {
+  text-transform: uppercase;
+  width: 12%;
+  height: 7%;
+  border: 2px groove white;
+  font-weight: 600;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #hero > div > .btn1 {
+    width: 40%;
+    height: 8%;
+    margin-top: 15%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+#hero > div > .btn1:hover {
+  background-color: #fff;
+  color: black;
+}
+
+#hero > div > .btn1 > i {
+  padding-left: 5%;
+  font-size: 1.5em;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#social {
+  width: 100%;
+  height: 15vh;
+  background-color: #120F22;
+}
+
+#social > ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+
+#social > ul > li {
+  padding: 0 2%;
+}
+
+#social > ul > li > a {
+  color: white;
+}
+
+#social > ul > li > a:hover {
+  color: #d75862;
+}
+
+#social > ul > li:nth-of-type(1) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  #social > ul > li:nth-of-type(1) {
+    width: 100%;
+  }
+}
+
+#social > ul > li .line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+}
+
+@media screen and (max-width: 768px) {
+  #social > ul > li .line {
+    width: 80%;
+  }
+}
+
+#intro {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  #intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#intro > figure {
+  margin-left: 0;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  #intro > figure {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+#intro > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#intro > figure > figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #intro > figure > figcaption {
+    font-size: 2em;
+  }
+}
+
+#intro > figure::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+  opacity: 0.8;
+}
+
+#intro > div {
+  width: 60%;
+  height: 100%;
+  padding: 5%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+@media screen and (max-width: 768px) {
+  #intro > div {
+    width: 100%;
+  }
+}
+
+#intro > div > h4 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  #intro > div > h4 {
+    font-size: 1.5em;
+  }
+}
+
+#intro > div > h4 > span {
+  color: #FE018F;
+}
+
+#intro > div > p {
+  color: #777;
+  font-size: 1.05em;
+  font-weight: 400;
+}
+
+.btn2 {
+  text-transform: uppercase;
+  border: 2px solid #000;
+  -o-border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+     border-image: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#FE018F));
+     border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+  border-image-slice: 1;
+  font-size: .9em;
+  padding: 2% 5%;
+  letter-spacing: 2px;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 5% 0;
+  position: relative;
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: black;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  color: white;
+}
+
+.btn2:hover::before {
+  opacity: 1;
+}
+
+.btn2::BEFORE {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+}
+
+.btn3 {
+  color: white !important;
+  padding: 1% 2.5%;
+}
+
+#event {
+  width: 100%;
+  height: 97vh;
+  background-color: #120f22;
+  padding: 5% auto;
+}
+
+@media screen and (max-width: 768px) {
+  #event {
+    height: auto;
+  }
+}
+
+#event > div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 80%;
+}
+
+#event > div > h4 {
+  font-size: 2.5em;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #event > div > h4 {
+    font-size: 2em;
+    margin-top: 5%;
+  }
+}
+
+#event > div > div {
+  width: 100%;
+  height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  #event > div > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+    margin: 5% 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #event > div > div > .btn3 {
+    margin: 5% 0 0 5% !important;
+  }
+}
+
+#event > div > div > div {
+  width: 50%;
+  height: 50%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  #event > div > div > div {
+    width: 100%;
+    margin: 5% 0;
+  }
+}
+
+#event > div > div > div .cal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2%;
+  color: #FE018F;
+  width: 12%;
+  height: 40%;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  #event > div > div > div .cal {
+    font-size: .7em;
+  }
+}
+
+#event > div > div > div .cal:hover {
+  -o-border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+     border-image: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#FE018F));
+     border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+  border-image-slice: 1;
+  color: #fff;
+}
+
+#event > div > div > div .cal:hover::after {
+  width: 100%;
+}
+
+#event > div > div > div .cal::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#event > div > div > div .cal > h6 {
+  font-size: 2em;
+  z-index: 2;
+}
+
+#event > div > div > div .cal > h5 {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+#event > div > div > div .ev_txt {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-left: 5%;
+}
+
+#event > div > div > div .ev_txt > h3 {
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+
+#event > div > div > div .ev_txt > h3:hover {
+  color: #d75862;
+}
+
+#event > div > div > div .ev_txt > h6 {
+  font-size: .9em;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 5%;
+}
+
+#event > div > div > div .ev_txt > p {
+  font-size: 1.05em;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.6;
+}
+
+#event > div > div > div .ev_txt > a {
+  font-size: .9em;
+  letter-spacing: 2px;
+  padding: 7px 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #FE018F;
+  margin-top: 5%;
+}
+
+#event > div > div > div .ev_txt > a:hover {
+  color: #E45F74;
+  -o-border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+     border-image: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#FE018F));
+     border-image: linear-gradient(to right, #ff6a00 0%, #FE018F);
+  border-image-slice: 1;
+}
+
+#event > div > div > div .ev_txt > a:hover::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+}
+
+#event > div > div > div .ev_txt > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 2px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+}
+
+#portfolio {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#portfolio > figure {
+  width: 33.3333333333333%;
+  cursor: pointer;
+  position: relative;
+  height: 40vh;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio > figure {
+    width: 100%;
+  }
+}
+
+#portfolio > figure > figcaption {
+  font-size: 3em;
+  color: white;
+  margin-top: -60%;
+  z-index: 2;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .4s .2s;
+  transition: .4s .2s;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio > figure > figcaption {
+    font-size: 1.5em;
+  }
+}
+
+#portfolio > figure:hover figcaption {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#portfolio > figure:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#portfolio > figure:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(15deg, #ff6a00 0%, #FE018F 100%);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#portfolio > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about {
+  width: 100%;
+  padding: 10%;
+}
+
+.about > div > figure {
+  width: 20%;
+}
+
+.about > div > figure > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about > div > figure > img {
+    display: none;
+  }
+}
+
+.about > div > div {
+  width: 70%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .about > div > div {
+    width: 100%;
+  }
+}
+
+.about > div > div > h4 {
+  font-weight: 600;
+  font-size: 2.5em;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 768px) {
+  .about > div > div > h4 {
+    font-size: 1.5em;
+  }
+}
+
+.about > div > div > p {
+  margin: 4% 0;
+  line-height: 1.6;
+  font-size: 1.05em;
+  font-weight: 400;
+  color: #777;
+}
+/*# sourceMappingURL=home.css.map */
